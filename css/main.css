@@ -1,0 +1,461 @@
+/* HEADER */
+.app{
+    border: 10px solid #f84a80;
+    background-image: url(../img/background.jpg);
+}
+.header__alert{
+    background-color: var(--primary-color);
+    border: 2px solid black;
+}
+.header__content{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    background-image: url(../img/background.jpg);
+    z-index: 2;
+}
+.header__alert-notify{
+    font-size: 1.14rem;
+    font-weight: 360;
+    padding: 12px 0;
+    text-align: center;
+}
+
+.header__main-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4rem;
+    height: 90px;
+    position: relative;
+}
+/* MENU MOBILE */
+.list-menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image: url(../img/background.jpg);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: transform linear 0.3s;
+    padding-left: 50px;
+    transform: translateX(-100%);
+}
+.list-menu-name{
+    list-style: none;
+    padding: 0;
+
+}
+.list-menu-name-selection{
+    padding-bottom: 25px;
+}
+.list-menu-name-selection a{
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+.checkbox_searchourstore{
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+.container__icon-search{
+    background-color: var(--primary-color);
+}
+.search__icon-main{
+    padding: 0 14px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 1.4rem;
+}
+.checkbox_search-main{
+    outline: none;
+    border: none;
+    font-size: 1.3rem;
+    border-radius: 0;
+    height: 40px;
+    padding-left: 8px;
+}
+.list-menu .time__icon-left{
+    position: absolute;
+    top: 5%;
+    right: 15%;
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+#checkboxleft:checked ~ .list-menu{
+    transform: translateX(0%);
+}
+/* MOBILE MENU TOP  */
+
+.listitems__selection-to-buy{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-image: url(../img/background.jpg);
+    z-index: 2;
+    padding: 30px 20px 0 20px;
+    box-shadow: -2px 0 10px 1px #ffb8c1;
+    transform: translateX(103%);
+    width: 350px;
+    transition: transform linear 0.2s;
+}
+.shopping_cart-title{
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    margin-bottom: 35px;
+}
+.name__of-items,.subtract,.number__ofitems_selection,.add__itemsbutton,
+.subtotal__price,.subtotal{
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    font-weight: 540;
+}
+.descrition_about-items{
+    margin-left: 40px;
+}
+.name__of-items:hover{
+    color: rgb(255, 128, 149);
+}
+.subtract{
+    margin-right: 25px;
+    background-image: url(../img/background.jpg);
+    cursor: pointer;
+}
+.add__itemsbutton{
+    margin-left: 25px;
+    cursor: pointer;
+
+}
+.img-items__buy-selection{
+    display: flex;
+    padding-bottom: 30px;
+    align-items: center;
+    border-bottom: 1px solid var(--primary-color);
+    padding-top: 20px;
+}
+.img-items__buy-selection img{
+    max-width: 56px;
+    text-decoration: none;
+}
+.sumofmoney{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 35px;
+}
+.checkout_button{
+    margin-top: 20px;
+    border: none;
+    background-color: var(--primary-color);
+    display: flex;
+    font-size: 1.5rem;
+    font-weight: 600;
+    justify-content: center;
+    padding: 5px 0;
+    border-radius: 2px;
+    align-items: center;
+    cursor: pointer;
+}
+.checkout_button-title{
+    color: black;
+    margin-right: 20px;
+}
+.subtotal{
+    font-weight: 600;
+}
+.subtotal__price{
+    font-weight: 400;
+}
+.header__logo-link{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.header__menu-list{
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+
+}
+.header__menu-items{
+    position: relative;
+    margin-right: 30px;
+}
+.down__icon{
+    margin-left: 10px;
+}
+.header__menu-items-link{
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    font-weight: 660;
+    position: relative;
+}
+.header__menu-items-center{
+    display: flex;
+    align-items: center;
+}
+.header__cart-number{
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 700;
+    color: black;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: -20%;
+    left: -25%;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+}
+.header__list-item-product{
+    background-color: #070506;
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 130px;
+    border: 1px solid var(--primary-color);
+    border-radius: 2px;
+    transform: translateY(5%);
+    display: none;
+    animation: fadeIn ease-in 0.3s;
+}
+.header__list-item-product::after{
+    content: "";
+    display: block;
+    position: absolute;
+    height: 12px;
+    width: 70px;
+    top: -7%;
+}
+.header__list-item-product-name{
+    display: block;
+    color: var(--primary-color);
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding: 3px 20px;
+    margin-bottom: 10px;
+}
+.header__menu-items-link:hover,.ti-angle-down:hover,.header__list-item-product-name:hover
+{
+    color: #d02e61;
+}
+.ti-angle-down{
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+.header__logo-img{
+    max-height: 80px;
+}
+.header__cart{
+    position: relative;
+    display: block;
+    text-align: right;
+}
+.cart_postition{
+    position: relative;
+    font-size: 2.4rem;
+}
+.header__cart-link{
+    color: var(--primary-color);
+    text-decoration: none;
+    position: relative;
+    animation: fadeIn ease 1.2s;
+    position: relative;
+}
+.ti-shopping-cart{
+    font-size: 2.4rem;
+}
+.header__menu-items:hover .header__list-item-product{
+    display: block;
+}
+.cart_postition:hover{
+    color: #d02e61;
+}
+.cart_postition:hover .header__cart-number{
+    background-color: #d02e61;
+}
+/* CONTAINER */
+.content{
+    margin-top: 40px;
+}
+.content__img-product{
+    padding-top: 100%;
+    background-color: var(--primary-color);
+    background-position: center;
+    background-size: contain;
+}
+.content__img-nameandprice-product{
+    font-size: 1.6rem;
+    color: var(--primary-color);
+    text-align: center;
+    margin-top: 15px;
+    font-weight: 650;
+}
+.product__mr-bottom{
+    margin-bottom: 60px;
+}
+.bar__icon{
+    font-size: 2.4rem;
+    color: var(--primary-color);
+}
+.x-right{
+    position: absolute;
+    top: 3%;
+    right: 10%;
+    color: var(--primary-color);
+    font-size: 2.5rem;
+}
+#checkcart-right:checked ~ .listitems__selection-to-buy{
+    transform: translateX(0);
+}
+.footer__content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon__footer-social-link{
+    text-decoration: none;
+    margin: 0 20px;
+}
+.icon__footer__social:hover{
+    color: #f63571;
+}
+.icon__footer__social{
+    font-size: 2.4rem;
+    color: var(--primary-color);
+}
+.right_reverse{
+    margin-top: 30px;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.contact_us-list{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    margin: 20px 0 50px 0;
+    flex-wrap: wrap ;
+    justify-content: center;
+}
+.contact_us-items-link{
+    color: #f63571;
+    font-size: 1rem;
+    font-weight: 500;
+    border-right: 1px solid #f63571;
+    padding: 0 15px;
+}
+.contact_us-items-link:hover{
+    color: #f63571;
+}
+.back__hoodie{
+    background-image: url(../img/LISA_HOODIE_F_480x.png);
+}
+.back__hoodie:hover{
+    background-image: url(../img/LISA_HOODIE_B_480x.png);
+}
+.laisa_hoodie{
+    background-image: url(../img/LISA_TEE1_F_480x.png);
+}
+.laisa_hoodie:hover{
+    background-image: url(../img/LISA_TEE1_B_480x.png);
+}
+.laisa_t-shirt-2{
+    background-image: url(../img/LISA_DYE1_F_960x.png);
+}
+.laisa_t-shirt-2:hover{
+    background-image: url(../img/LISA_DYE1_B_960x.png);
+}
+.laisa_crop-top-black{
+    background-image: url(../img/LISA_LS_CROP_F_960x.png);
+}
+.laisa_crop-top-black:hover{
+    background-image: url(../img/LISA_LS_CROP_B_960x.png);
+}
+.lovesick_girl-2{
+    background-image: url(../img/LG_BlackTee_2_960x.png);
+}
+.lovesick_girl-2:hover{
+    background-image: url(../img/LG_BlackTee_1_960x.png);
+}
+.lovesick_girl-3{
+    background-image: url(../img/BLK-LS_FRNT_960x.png);
+}
+.lovesick_girl-3:hover{
+    background-image: url(../img/BLK-LS_BCK_960x.png);
+}
+.lovesick_hoodie{
+    background-image: url(../img/BLK-HOODIE_FRNT_960x.png);
+}
+.lovesick_hoodie:hover{
+    background-image: url(../img/BLK-LS_FRNT_960x.png);
+}
+.lovesick_paint{
+    background-image: url(../img/LG_WHSW_1_480x.png);
+}
+.lovesick_paint:hover{
+    background-image: url(../img/LG_WHSW_2_480x.png);
+}
+.lovesick_paint_black{
+    background-image: url(../img/BLK-SWEATS_FNT_REV_2ad7e171-2f31-480c-b465-1698a1d4b9e4_480x.png);
+}
+.lovesick_paint_black:hover{
+    background-image: url(../img/BLK-SWEATS_BCK_REV_47931f51-7946-4347-b586-e64a5b67bad4_480x.png);
+}
+.ice__cream-pullover{
+    background-image: url(../img/BPSG_CrewF_480x.png);
+}
+.ice__cream-pullover:hover{
+    background-image: url(../img/BPSG_CrewB_480x.png);
+}
+.CREWNECK_PULLOVER{
+    background-image: url(../img/BPSG_DyeF_faec3f21-5d3a-46e7-8beb-c863ba115477_480x.png);
+}
+.CREWNECK_PULLOVER:hover{
+    background-image: url(../img/BPSG_DyeB_c32bfffb-e9fa-4c47-936d-ab6409474bb2_480x.png);
+}
+.ICE-CREAM_HOODIE{
+    background-image: url(../img/BPSG_HoodF_480x.png);
+}
+.ICE-CREAM_HOODIE:hover{
+    background-image: url(../img/BPSG_HoodB_480x.png);
+}
+.ICE_CREAM_T-SHIRT-I{
+    background-image: url(../img/BPSG_BlackTB_c9ff4009-b399-4f27-8e29-d0872afb60d4_480x.png);
+}
+.ICE_CREAM_T-SHIRT-I:hover{
+    background-image: url(../img/BPSG_BlackTF_1782a575-6702-4e0c-ae2a-4dcb0977eb69_480x.png);
+}
+.ICE_CREAM_T-SHIRT-II{
+    background-image: url(../img/BPSG_ICDyeTB_480x.png);
+}
+.ICE_CREAM_T-SHIRT-II:hover{
+    background-image: url(../img/BPSG_ICDyeTF_480x.png);
+}
+.ICE_CREAM_T-SHIRT-III{
+    background-image: url(../img/BPSG_ICTF_6aceb377-eada-428d-8156-27e0dadb5daf_480x.png);
+}
+.ICE_CREAM_T-SHIRT-III:hover{
+    background-image: url(../img/BPSG_ICTB_b1f8e7f9-1c0d-4fc5-80c3-e41bcd396406_480x.png);
+}
+.ICE_CREAM_T-SHIRT-IV{
+    background-image: url(../img/BPSG_ICT4f_480x.png);
+}
+.ICE_CREAM_T-SHIRT-IV:hover{
+    background-image: url(../img/BPSG_ICT4b_480x.png);
+}
+.sold_out{
+    font-weight: 200;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
